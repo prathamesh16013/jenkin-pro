@@ -65,3 +65,7 @@ pipeline {
     }
 }
 
+tools {
+    nodejs 'NodeJS 18' // Use the same name you added in Jenkins
+}
+
