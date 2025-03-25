@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'NodeJS 18' // Ensure this matches the configured Node.js tool in Jenkins
+    }
+
     environment {
         IMAGE_NAME = "node-app-image"
         CONTAINER_NAME = "node-container"
@@ -63,9 +67,5 @@ pipeline {
             echo 'Build failed. Check Jenkins logs.'
         }
     }
-}
-
-tools {
-    nodejs 'NodeJS 18' // Use the same name you added in Jenkins
 }
 
