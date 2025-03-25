@@ -5,13 +5,12 @@ pipeline {
         IMAGE_NAME = "node-app-image"
         CONTAINER_NAME = "node-container"
         DOCKER_HUB_USER = "pratham16013"
-        REPO_URL = "https://github.com/prathamesh16013/jenkin-pro.git"
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'master', url: "${https://github.com/prathamesh16013/jenkin-pro.git}"
+                git branch: 'master', url: 'https://github.com/prathamesh16013/jenkin-pro.git'
             }
         }
 
